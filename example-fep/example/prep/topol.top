@@ -1,0 +1,33 @@
+; Created by Sobtop (http://sobereva.com/soft/sobtop) Version 1.0(dev3.1) on 2024-04-08
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ    fudgeQQ
+     1              2              yes            0.5       0.8333
+
+#include "/mmx/gromacs/NPBA/1/1four/ready_top/forcefield.itp"
+#include "/mmx/gromacs/NPBA/1/1four/ready_top/HMX_1.itp"
+; Position restraints for HMX
+#ifdef POSRES
+#include "/mmx/gromacs/NPBA/1/1four/prep/posre_HMX.itp"
+#endif
+
+#include "/mmx/gromacs/NPBA/1/1four/ready_top/LIG_1.itp"
+; Position restraints for Ligand
+#ifdef POSRES
+#include "/mmx/gromacs/NPBA/1/1four/prep/posre_LIG.itp"
+#endif
+
+
+
+[ system ]
+complex
+
+[ molecules ]
+; Molecule      nmols
+HMX_1     1
+LIG_1     1
+
+
+
+
+

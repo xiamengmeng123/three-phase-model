@@ -1,0 +1,58 @@
+; 常用运行参数
+define     = -DPOSRES  ; position restrain the HMX and LIG
+integrator = md-vv ;Andersen必须用这个md-vv并指定nstcomm 和nstcalcenergy
+dt         = 0.001   ; ps 积分步长
+nsteps     = 100000
+nstcomm = 1
+nstcalcenergy = 1
+;
+nstxout = 1000
+nstvout = 1000
+nstfout = 1000
+nstlog  = 1000
+nstenergy = 1000
+nstxout-compressed = 1000
+compressed-x-grps  = system
+
+;
+continuation = no
+constraints =  h-bonds;all-bonds
+constraint_algorithm =  lincs
+lincs_iter =   4
+lincs_order =   12
+;
+cutoff-scheme = Verlet
+ns_type=grid
+nstlist = 10  
+vdwtype = Cutoff
+rcoulomb = 1.4 
+rvdw     = 1.4 
+;
+coulombtype = PME
+pme_order = 4
+fourierspacing = 0.16
+pbc = xyz
+periodic_molecules = no
+DispCorr = EnerPres
+;  
+Tcoupl  = V-rescale
+tau_t   = 1.0 ;耦合时间常数
+tc_grps = system
+ref_t   = 300 
+;
+Pcoupl = no 
+;
+;annealing = single
+;annealing_npoints = 3
+;annealing_time = 0 50 100 
+;annealing_temp = 100 300 300 
+;
+gen_vel  = yes
+gen_temp = 100
+gen_seed = -1
+;
+freezegrps  = 
+freezedim   = 
+
+
+

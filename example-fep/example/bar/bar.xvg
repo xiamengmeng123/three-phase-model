@@ -1,0 +1,44 @@
+# This file was created Mon Aug 11 09:26:44 2025
+# Created by:
+#                       :-) GROMACS - gmx bar, 2019.6 (-:
+# 
+# Executable:   /fs1/software/gromacs/2019.6-sp-icc19.1-IMPI2019.8/bin/gmx_mpi
+# Data prefix:  /fs1/software/gromacs/2019.6-sp-icc19.1-IMPI2019.8
+# Working dir:  /fs1/home/chengkun_wu/mmx/gromacs/NPBA/1/1four/bar
+# Command line:
+#   gmx_mpi bar -f md0.xvg md1.xvg md2.xvg md3.xvg md4.xvg md5.xvg md6.xvg md7.xvg md8.xvg md9.xvg md10.xvg md11.xvg md12.xvg md13.xvg md14.xvg md15.xvg md16.xvg md17.xvg md18.xvg md19.xvg md20.xvg md21.xvg md22.xvg md23.xvg md24.xvg md25.xvg md26.xvg md27.xvg -o -oi -oh
+# gmx bar is part of G R O M A C S:
+#
+# Gravel Rubs Often Many Awfully Cauterized Sores
+#
+@    title "Free energy differences"
+@    xaxis  label "\xl\f{}"
+@    yaxis  label "\xD\f{}G (kT)"
+@TYPE xydy
+ 0.500  3.12  0.12
+ 1.500  3.58  0.30
+ 2.500  4.54  0.25
+ 3.500  3.60  0.10
+ 4.500  3.20  0.14
+ 5.500  5.06  0.24
+ 6.500  2.88  0.15
+ 7.500  2.29  0.15
+ 8.500 -6.85  0.41
+ 9.500 -4.15  0.30
+10.500  0.72  0.43
+11.500  2.27  0.06
+12.500  2.08  0.13
+13.500  1.54  0.09
+14.500  0.97  0.08
+15.500  1.89  0.10
+16.500  1.51  0.16
+17.500  0.36  0.04
+18.500  1.99  0.03
+19.500  1.95  0.03
+20.500  2.20  0.07
+21.500  4.57  0.20
+22.500  4.17  0.28
+23.500  1.90  0.07
+24.500  1.05  0.27
+25.500  0.48  0.13
+26.500  0.37  0.18

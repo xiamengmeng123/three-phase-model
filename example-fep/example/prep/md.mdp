@@ -1,0 +1,52 @@
+; 常用运行参数
+;define = -DFLEXIBLE 
+integrator = md-vv ;指定积分算法
+dt         = 0.001   ; ps 积分步长
+nsteps     = 1000000  ;1ns
+nstcomm = 1
+nstcalcenergy = 1
+;
+nstxout = 1000
+nstvout = 1000
+nstfout = 1000
+nstlog  = 1000
+nstenergy = 1000
+nstxout-compressed = 1000
+compressed-x-grps  = system
+
+;
+continuation = no
+constraints =  ;all-bonds
+constraint_algorithm =  ;lincs
+lincs_iter =   ;1
+lincs_order =   ;4
+;
+cutoff-scheme = Verlet
+ns_type=grid
+nstlist = 10  
+vdwtype = Cutoff
+rcoulomb = 1.4 
+rvdw     = 1.4 
+;
+coulombtype = PME
+pme_order = 4
+fourierspacing = 0.16
+pbc = xyz
+periodic_molecules = no
+DispCorr = EnerPres
+;
+Pcoupl = no
+;  
+Tcoupl  = V-rescale
+tau_t   = 1.0 ;耦合时间常数
+tc_grps = system
+ref_t   = 300
+;
+gen_vel  = yes
+gen_temp = 300
+gen_seed = -1
+;
+freezegrps  = 
+freezedim   = 
+
+

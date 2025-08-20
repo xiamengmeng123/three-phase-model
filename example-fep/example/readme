@@ -1,0 +1,16 @@
+总体思路----能量分三部分构成G1 G2 G3
+G1：run run_fep_res_complex.sh  complex环境中配体解耦以及施加限制势自由能，一共27个lambda
+G2: 0 真空下配体解耦自由能
+G3：restraints.info  真空中配体的解析自由能 
+G=G2+G3-G1
+
+步骤：
+1.由sobtop生成最初的HMX_1.* LIG_1.*等gmx输入文件
+    sh fep_gen_top.sh 1  
+2.跑完预平衡后生成complex的boresch_restraints.itp 文件，生成的restraints.info有真空中配体的解离自由能
+3.生成任务列表 sh run_fep_res_complex.sh 1 cp2 
+4.提交作业 nohup ./job_daemon.sh 分区 /dev/null 2>&1 & 
+5.计算相互作用能 sh energy_calculate.sh $partition
+6.计算结合自由能 gmx_mpi bar -f md{0..27}.xvg -o -oi -oh 
+也可以采用alchemical_analysis.py计算，将md$i.xvg转成dhdl.$i.xvg，再运行python alchemical_analysis/alchemical_analysis.py -d ../xvg/ -o . -m -dexp-iexp -r 6 -g -w
+    
