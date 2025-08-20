@@ -16,7 +16,7 @@ plt.ioff()
 save_directory = "D:/vspractice/cif_file/"
 
 #搜索分子的docs信息
-with MPRester(api_key='wLy5pd6Ks27Xy76HygnKMJqBgtB4DWHn') as mpr:
+with MPRester(api_key='') as mpr:
     try:
         # docs = mpr.molecules.summary.search(molecule_ids=["08dfdd83319a24bf2a0c31db2f83e909-C6H7N1O2-1-2","1b9596a8277f19bb553b58d2e67a1f2f-C6H7N1O2-1-2"])
         # docs = mpr.molecules.summary.search(molecule_ids=["14e9a3c9c48c9cc3b6b9c7b92401335e-C2F3N1S2-m2-1","f9979ab58248dc4966cbb56481d647d2-C1Mg1N2O1S1-m1-2","4b78910e8f83b3b7d4b60b6f4d479fac-C4F1H2Li1O4-0-1"])#,fields=["molecule_ids","inchi"])
